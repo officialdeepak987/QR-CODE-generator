@@ -1,0 +1,281 @@
+:root {
+    --baseColor: #606468;
+  }
+  
+  .grid {
+    inline-size: 90%;
+    margin-inline: auto;
+    max-inline-size: 20rem;
+    display:grid;
+  }
+  
+  
+  .hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  .icon {
+    block-size: 1em;
+    display: inline-block;
+    fill: var(--iconFill);
+    inline-size: 1em;
+    vertical-align: middle;
+  }
+  
+  :root {
+    --htmlFontSize: 100%;
+  
+    --bodyBackgroundColor: #2c3338;
+    --bodyColor: var(--baseColor);
+    --bodyFontFamily: "Open Sans";
+    --bodyFontFamilyFallback: sans-serif;
+    --bodyFontSize: 0.876rem;
+    --bodyFontWeight: 400;
+    --bodyLineHeight: 1.5;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: var(--htmlFontSize);
+  }
+
+
+  body {
+    background-color: #2d4044;
+   color: white;
+    font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+    font-size: var(--bodyFontSize);
+    font-weight: var(--bodyFontWeight);
+    line-height: var(--bodyLineHeight);
+    margin: 0;
+    min-block-size: 100vh;
+     display: grid;
+    place-items: center;
+  }
+  
+  
+  
+  :root {
+    --anchorColor: #eee;
+  }
+  
+  a {
+    color: var(--anchorColor);
+    outline: 0;
+    text-decoration: none;
+  }
+  
+  a:focus,
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  :root {
+    --formGap: 0.875rem;
+  }
+  
+  input {
+    background-image: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    transition: background-color 0.3s;
+  }
+  
+  textarea {
+    background-image: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    transition: background-color 0.3s;
+  }
+  
+  select,option {
+    background-image: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="submit"] {
+    cursor: pointer;
+  }
+  
+  
+  textarea,
+  select,
+  option,
+  input[type="submit"] {
+    inline-size: 100%;
+  }
+  
+  
+  
+  
+  :root {
+    --loginBorderRadus: 0.25rem;
+    --loginColor: #eee;
+  
+    --loginInputBackgroundColor: #3b4148;
+    --loginInputHoverBackgroundColor: #434a52;
+  
+    --loginLabelBackgroundColor: #363b41;
+  
+    --loginSubmitBackgroundColor: #ea4c88;
+    --loginSubmitColor: #eee;
+    --loginSubmitHoverBackgroundColor: #d44179;
+  }
+  
+  /* .login {
+   
+  }
+   */
+  
+  textarea,
+  select,
+  option,
+  textarea,
+  input[type="submit"] {
+  border-radius: var(--loginBorderRadus);
+  padding: 1rem;
+  }
+  
+  
+  
+  
+  textarea,option,select {
+    background-color: var(--loginInputBackgroundColor);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+  
+  
+  textarea:focus,
+  textarea:hover {
+    background-color: var(--loginInputHoverBackgroundColor);
+  }
+  
+  input[type="submit"] {
+  background-color: #d75821;
+  color: var(--loginSubmitColor);
+  font-weight: 700;
+  text-transform: uppercase;
+  }
+  
+  input[type="submit"]:focus,
+  input[type="submit"]:hover {
+    background-color: #34ab10;
+  }
+  
+  
+  p {
+    margin-block: 1.5rem;
+    text-align: center;
+  }
+  
+  
+  img
+  {
+  max-width: 100%;
+  max-height: 100%;
+  }
+  /* styel of socila media */
+
+
+  /*  style */
+
+ /* styel of socila media */
+
+
+  /* Share Buttons */
+
+  .share-btn-container {
+    background:var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    right: 97%;
+    transform: translateY(-50%);
+    /* opacity: ; */
+  }
+  
+  .share-btn-container span i {
+    font-size: 32px;
+  }
+  
+  .share-btn-container span {
+    margin: 12px 0;
+    transition: 500ms;
+  }
+  
+  .share-btn-container a:hover {
+    transform: scale(1.2);
+  }
+  
+  .share-btn-container .fa-twitter {
+    color: #1da1f2;
+  }
+    
+.share-btn-container .fa-telegram {
+    color: #1da1f2;
+  }
+  
+  .share-btn-container .fa-whatsapp {
+    color: #25d366;
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 550px) {
+    .content {
+      padding: 8px 32px;
+    }
+  
+    .share-btn-container {
+      transform: unset;
+      top: unset;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      flex-direction: row;
+      box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+      padding: 16px 0;
+      justify-content: center;
+      grid-area: 0.8em;
+    }
+    .share-btn-container .common-gap{
+        display:inline-block;
+        padding:10px;
+        margin:0px;
+    }
+  
+    .share-btn-container a {
+      margin: 0 32px;
+    }
+  }
+ 

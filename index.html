@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <title>QR Code Generator</title>
+    <meta name="description" content="qR CODE Generate"></meta>
+    <meta name="keywords" content="HTML, CSS ,JAVASCRIPT portfolio website" ></meta>
+    <meta name='author' content="Deepak singh"></meta>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+    <script type="text/javascript">
+        function genQR()
+        {
+            var gapi="https://chart.googleapis.com/chart?chf=bg,s,65432100&cht=qr&chs=";
+            var myimg=document.getElementById("img");
+            var mytext=document.getElementById("qrtext").value;
+            var mysize=document.getElementById("size").value;
+
+            if (mytext!=="" && mysize=="100")
+            {
+                myimg.src=gapi+"100x100"+"&chl="+mytext;
+                // https://chart.googleapis.com/chart?cht=qr&chs=100x100&chl=hello
+            }
+
+            else if(mytext!=="" && mysize=="150")
+            {
+
+                myimg.src=gapi+"150x150"+"&chl="+mytext;
+            }
+
+            else if(mytext!=="" && mysize=="200")
+            {
+                myimg.src=gapi+"200x200"+"&chl="+mytext;
+            }
+
+            else if (mytext!=="" && mysize=="250")
+            {
+                myimg.src=gapi+"250x250"+"&chl="+mytext;
+            }
+
+            else if (mytext!=="" && mysize=="300")
+            {
+                myimg.src=gapi+"300x300"+"&chl="+mytext;
+            }
+            else if (mytext!=="" && mysize=="400")
+            {
+                myimg.src=gapi+"400x400"+"&chl="+mytext;
+            }
+
+            else
+            {
+                alert("Please Enter Text");
+            }
+        
+        }
+
+        
+    </script>
+    <div class="grid">
+        <h2 align="center">Qr Code Generator</h2>
+        <center>
+        <img src="" id="img"></center>
+
+        <select id="size">
+            <option value="100">100x100</option>
+            <option value="150">150x150</option>
+            <option value="200">200x200</option>
+            <option value="300">300x300</option>
+            <option value="400">400x400</option>
+        </select>
+        <br><br>
+        <textarea placeholder="Enter Your Text" id="qrtext"></textarea>
+        <br><br>
+        <input type="submit" value="Generate" onclick="genQR()">
+
+        <p>Developed By Deepak singh</p> 
+    </div>
+
+    <!-- social media -->
+    <div class="share-btn-container ">
+        <span class="whatsapp common-gap"><i class="fa-brands fa-whatsapp"></i></span>
+        <span class="twitter common-gap"><i class="fa-brands fa-twitter"></i></span>
+        <span class="telegram  common-gap"><i class="fa-brands fa-telegram"></i></span>
+    
+      </div>
+      
+      <script src="main.js"></script>
+</body>
+</html>
